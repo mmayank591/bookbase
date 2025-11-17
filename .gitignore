@@ -1,0 +1,45 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+src/main/resources/application.properties
+src/main/resources/logs/bookbase-backend.logs
+
+.vscode/
+logs/
+
+
+backend_microservices/bookservice/src/main/resources/application.properties
+backend_microservices/fineservice/src/main/resources/application.properties
+backend_microservices/memberservice/src/main/resources/application.properties
+backend_microservices/notificationservice/src/main/resources/application.properties
+backend_microservices/transactionservice/src/main/resources/application.properties

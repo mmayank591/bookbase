@@ -1,0 +1,33 @@
+.appLayout { display:flex; height:100vh; }
+
+.main { flex:1; display:flex; flex-direction:column; min-width:0; }
+
+.content{ flex:1; padding:var(--content-padding); display:flex; flex-direction:column; }
+
+.contentRow { display:flex; gap:16px; align-items:stretch; height:100%; min-width:0; }
+
+.tableCard { flex:1; background:#fff; border-radius:12px; padding:18px; display:flex; flex-direction:column; overflow:hidden; min-width:0; height: 470px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+
+.tableWrap{ overflow:auto; border-radius:8px; flex:1; min-width:0; }
+
+table { width:100%; border-collapse:collapse; min-width:780px; }
+thead th { padding:12px 14px; border-bottom:2px solid #ececec; text-align:left; font-weight:700; }
+tbody td { padding:12px 14px; border-bottom:1px solid #f0f0f0; }
+tbody tr:hover { background:#fafafa; }
+
+.rcardTitle {
+  color: var(--green);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.rtable svg {
+  color: var(--orange-mid);
+  stroke-width: 3;
+  transition: ease 0.4s;
+}
+
+.rtable svg:hover {
+  color: var(--orange);
+  scale: 1.2;
+}

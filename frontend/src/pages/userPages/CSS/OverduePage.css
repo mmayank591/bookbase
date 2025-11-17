@@ -1,0 +1,101 @@
+.overdue-appLayout { 
+    display:flex; 
+    height:100vh; 
+}
+
+.overdue-main { 
+    flex:1; 
+    display:flex; 
+    flex-direction:column;
+    min-width:0; 
+}
+
+.bcardTitle {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.overdue-content{ 
+    flex:1; 
+    padding:var(--content-padding); 
+    display:flex; 
+    flex-direction:column; 
+}
+
+.overdue-contentRow { 
+    display:flex; 
+    gap:16px; 
+    align-items:stretch; 
+    height:100%; 
+    min-width:0; 
+}
+
+.overdue-tableCard { 
+    flex:1; 
+    background:#fff; 
+    border-radius:12px; 
+    margin:15px; 
+    padding:18px; 
+    display:flex; 
+    flex-direction:column; 
+    overflow:hidden; 
+    height: 470px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.overdue-tableWrap { 
+    overflow:auto; 
+    border-radius:8px; 
+    flex:1; 
+    min-width:0; 
+}
+
+.overdueTable table { 
+    width:100%; 
+    border-collapse:collapse; 
+    min-width:780px; 
+}
+
+.overdueTable thead th { 
+    padding:12px 14px; 
+    border-bottom:2px solid #ececec; 
+    font-weight:700; 
+}
+
+.overdueTable tbody td { 
+    padding:12px 14px; 
+    border-bottom:1px solid #f0f0f0; 
+}
+
+.overdueTable tbody tr:hover { 
+    background:#f7f7f7; 
+}
+
+.overdueTable svg {
+    stroke-width: 3;
+    color: var(--orange-mid);
+    transition: ease 0.4s;
+}
+
+.overdueTable svg:hover {
+    color: var(--orange);
+    scale: 1.2;
+}
+
+.total-fine-display {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    border-top: 2px solid #eee;
+    margin-top: 10px;
+}
+
+.total-fine-text {
+    font-size: 160%;
+    font-weight: 900;
+    color: var(--red);
+    padding: 5px 20px;
+    background-color: transparent;
+}

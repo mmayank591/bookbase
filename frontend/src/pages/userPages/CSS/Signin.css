@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left, .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.left {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.right {
+    background-color: var(--black);
+    color: var(--white);
+    border-top-left-radius: 7%;
+    border-bottom-left-radius: 7%;
+}
+
+.signinlogo img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.bookbaselogo img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#signinusername, #signinpassword {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cdcdcd;
+    font-size: 16px;
+}
+
+.forgot-link {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: ease 0.3s;
+}
+
+.forgot-link:hover {
+    color: var(--orange);
+}
+
+.sign-in {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.sign-up {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.forgot-password {
+    margin-top: 5px;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.credentials input {
+    margin-bottom: 10px;
+}
+
+.credentials button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--orange);
+    margin-top: 15px;
+    max-width: 300px;
+    font-size: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: ease 0.5s;
+}
+
+.credentials button:hover {
+    background-color: var(--orange-mid);
+}
+
+.welcome-text {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.welcome-text h1 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+.new-user-text p {
+    margin-bottom: 0px;
+    margin-top: 20px;
+    color: var(--white);
+}
+
+.sign-up-button button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-weight: 800;
+}
+
+.sign-up-button button:hover {
+    background-color: var(--white);
+    color: var(--black);
+    transition: ease 0.5s;
+}

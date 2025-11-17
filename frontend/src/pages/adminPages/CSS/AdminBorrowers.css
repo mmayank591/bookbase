@@ -1,0 +1,74 @@
+.adminappLayout { 
+    display:flex; 
+    height:100vh; 
+}
+
+.adminmain { 
+    flex:1; 
+    display:flex; 
+    flex-direction:column;
+    min-width:0; 
+}
+
+.borrowed-content{ 
+    flex:1; 
+    padding:var(--content-padding); 
+    display:flex; 
+    flex-direction:column; 
+}
+
+.admincontentRow { 
+    display:flex; 
+    gap:16px; 
+    align-items:stretch; 
+    height:100%; 
+    min-width:0; 
+}
+
+.admintableCard { 
+    flex:1; 
+    background:#fff; 
+    border-radius:12px; 
+    margin:15px; 
+    padding:18px; 
+    display:flex; 
+    flex-direction:column; 
+    overflow:hidden; 
+    height: 470px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.admintableWrap { 
+    overflow:auto; 
+    border-radius:8px; 
+    flex:1; 
+    min-width:0; 
+}
+
+.admincardTitle {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.adminTable { 
+    width:100%; 
+    border-collapse:collapse; 
+    min-width:780px; 
+}
+
+.adminTable thead th { 
+    padding:12px 14px; 
+    border-bottom:2px solid #ececec; 
+    font-weight:700; 
+}
+
+.adminTable tbody td { 
+    padding:12px 14px; 
+    border-bottom:1px solid #f0f0f0; 
+}
+
+.adminTable tbody tr:hover { 
+    background:#f7f7f7; 
+}

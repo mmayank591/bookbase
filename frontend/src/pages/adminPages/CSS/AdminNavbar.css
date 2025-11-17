@@ -1,0 +1,163 @@
+.adminnavbar{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 5px 15px 5px 15px;
+  background-color: var(--white-light);
+  color: var(--black);
+  min-height: 50px;
+  border-bottom: 1px solid var(--black-light);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.adminnavbar-left,
+.adminnavbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admintime-date-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admindivider {
+  width: 2px; 
+  height: 30px; 
+  background-color: var(--black); 
+}
+
+.adminuser-info-container {
+  display: flex; 
+  align-items: center; 
+  gap: 7px;
+}
+
+.adminbracket-name {
+  margin-bottom: 0; 
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.adminbracket-role {
+  margin-top: 0; 
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.adminbracket p {
+  margin: 0px;
+  text-align: left;
+}
+
+.adminsettings-container svg {
+  color: var(--green);
+  cursor: pointer;
+}
+
+.adminnotification-container svg {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.adminuser-info-container svg {
+  color: var(--red);
+}
+
+.adminsettings-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.adminsettings-popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.adminpopup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.adminpopup-header h4 {
+  margin: 0;
+}
+
+.adminclose-popup {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.adminclose-popup svg {
+  color: #888;
+}
+
+.adminsettings-form .adminform-group {
+    display: flex; /* Added Flexbox */
+    align-items: center; /* Vertically aligns label and input */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.adminsettings-form label {
+    flex-shrink: 0; /* Prevents the label from shrinking */
+    font-weight: bold;
+    color: #555;
+    width: 120px; /* Gives the label a fixed width for alignment */
+    text-align: right;
+}
+
+.adminsettings-form .adminsettings-input { /* Updated selector with new class */
+    flex-grow: 1; /* Key to making it fill the space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.adminsettings-form .adminsubmit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: ease 0.4s;
+}
+
+.adminsettings-form .adminsubmit-button:hover {
+    background-color: var(--green-light);
+}
+
+.adminerror-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}

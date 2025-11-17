@@ -1,0 +1,131 @@
+/* Container layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Signup section (right panel) */
+.signup-section {
+    width: 50%;
+    background-color: var(--white);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+#signupform-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#signupform-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+#signupform-container .signup {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--red-light);
+    color: var(--black);
+    margin-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: ease 0.5s;
+}
+
+#signupform-container .signup:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+#signupform-container .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Login section (left panel) */
+.login-section {
+    width: 50%;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
+}
+
+.logo-full {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    width: 60px;
+}
+
+.login-section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.login-section p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-section .sign-in {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-section .sign-in:hover {
+    background-color: var(--white);
+    color: var(--black);
+    transition: ease 0.5s;
+}
+
+/* Styling for the disabled button state */
+#signup:disabled {
+    /* Changes the background and opacity to visually indicate it's disabled */
+    background-color: #ccc; /* A lighter color */
+    color: gray;
+    opacity: 0.7;
+    cursor: not-allowed; /* This is the key line for the blocked icon */
+}
+
+/* Optional: Ensure the hover effect is suppressed when disabled */
+#signup:disabled:hover {
+    background-color: #ccc; /* Keep the same color as the disabled state */
+    opacity: 0.7;
+    color: gray;
+}

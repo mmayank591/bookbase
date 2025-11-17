@@ -1,0 +1,92 @@
+/* wrapper */
+.admintoggle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  height: 56px;
+}
+
+/* tabs container */
+.admintabs {
+  display: flex;
+  gap: 12px;
+}
+
+/* tab link */
+.admintabs .admintbb {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--black-mid);
+  background: var(--white);
+  border: 2px solid var(--blue-light);
+  transition: all 0.3s ease;
+}
+
+.admintabs .admintrb {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--black-mid);
+  background: var(--white);
+  border: 2px solid var(--green-light);
+  transition: 0.3s ease;
+}
+
+.admintabs .admintbb:hover {
+  color: var(--black);
+  background: var(--white);
+  border: 2px solid var(--blue);
+}
+
+.admintabs .admintrb:hover {
+  color: var(--black);
+  background: var(--white);
+  border: 2px solid var(--green);
+}
+
+.adminbactive {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--white);
+  background: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.adminractive {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--white);
+  background: var(--green);
+  border: 2px solid var(--green);
+}
+
+/* fills space so search goes right */
+.adminspacer {
+  flex: 1;
+}
+
+/* search box */
+.adminsearch input {
+  width: 220px;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+}

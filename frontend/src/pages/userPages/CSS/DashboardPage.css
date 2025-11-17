@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--white-light);
+}
+
+.dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-content-row {
+    display: flex;
+    flex-grow: 1;
+}
+
+.dashboard-content {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.contentRow {
+    margin: 15px;
+}
+
+/* Corrected: Removed justify-content: space-between; and added a gap */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* This creates a gap between the buttons and the quote */
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buttons */
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    color: var(--black-mid);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.bb {
+    border: 2px solid var(--orange-light);
+}
+
+.bb:hover {
+    transform: scale(1.02);
+    border: 2px solid var(--orange);
+    color: var(--black);
+}
+
+.bb svg {
+    color: var(--orange);
+}
+
+.rb {
+    border: 2px solid var(--green-light);
+}
+
+.rb:hover {
+    transform: scale(1.02);
+    border: 2px solid var(--green);
+    color: var(--black);
+}
+
+.rb svg {
+    color: var(--green);
+}
+
+.cb {
+    border: 2px solid var(--blue-light);
+}
+
+.cb:hover {
+    transform: scale(1.02);
+    border: 2px solid var(--blue);
+    color: var(--black);
+}
+
+.cb svg {
+    color: var(--blue);
+}
+/* Styling for the Overdue Books Button */
+.overdue-button {
+    /* Inherit default custom-button styles (size, padding, font, shadow, etc.) */
+    
+    /* 1. Define the unique look (e.g., Red/Warning Color) */
+    /* Using a distinct red color for 'overdue' */
+    border: 2px solid var(--red-light, #ffcccb); /* Fallback to light red */
+    color: var(--black-mid); 
+}
+
+.overdue-button:hover {
+    /* 2. Hover effect */
+    transform: scale(1.02);
+    border: 2px solid var(--red, #ff0000); /* Fallback to red */
+    color: var(--black);
+}
+
+.overdue-button svg {
+    /* 3. Icon color */
+    color: var(--red, #ff0000); /* Match icon color to border/hover color */
+}
+.quote-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 2px solid var(--purple-light);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.quote-text {
+    font-size: 20px;
+    color: var(--purple);
+    font-weight: 700;
+}
+
+.quote-author {
+    text-align: right;
+    font-size: 16px;
+    color: var(--purple);
+}
+
+.piechart-container {
+    width: 90%;
+    height: 500px;
+    max-width: 500px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dashboardPieChart {
+    width: 100%;
+    height: auto;
+}

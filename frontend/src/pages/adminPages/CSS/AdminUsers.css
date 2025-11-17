@@ -1,0 +1,96 @@
+.adminusersappLayout { 
+    display:flex; 
+    height:100vh; 
+}
+
+.adminusersappmain { 
+    flex:1; 
+    display:flex; 
+    flex-direction:column;
+    min-width:0; 
+}
+
+.adminusersappHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.adminusersappIcon svg{
+    stroke: var(--green-mid);
+    transition: ease 0.3s;
+}
+
+.adminusersappIcon svg:hover {
+    stroke: var(--green);
+    scale: 1.15;
+}
+
+.adminusersappcontentRow { 
+    display:flex; 
+    gap:16px; 
+    align-items:stretch; 
+    height:100%; 
+    min-width:0; 
+}
+
+.adminusersapptableCard { 
+    flex:1; 
+    background:#fff; 
+    border-radius:12px; 
+    margin:15px; 
+    padding:18px; 
+    display:flex; 
+    flex-direction:column; 
+    overflow:hidden; 
+    height: 470px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.adminusersapptableWrap { 
+    overflow:auto; 
+    border-radius:8px; 
+    flex:1; 
+    min-width:0; 
+}
+
+.adminusersappTitle {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.adminusersTable { 
+    width:100%; 
+    border-collapse:collapse; 
+    min-width:780px; 
+}
+
+.adminusersTable thead th { 
+    padding:12px 14px; 
+    border-bottom:2px solid #ececec; 
+    font-weight:700; 
+}
+
+.adminusersTable tbody td { 
+    padding:12px 14px; 
+    border-bottom:1px solid #f0f0f0; 
+}
+
+.adminusersTable tbody tr:hover { 
+    background:#f7f7f7; 
+}
+
+.adminusersTable svg {
+    stroke-width: 3;
+    color: var(--orange-mid);
+    transition: ease 0.4s;
+}
+
+.adminusersTable svg:hover {
+    color: var(--orange);
+    scale: 1.2;
+}

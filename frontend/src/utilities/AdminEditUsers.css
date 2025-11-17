@@ -1,0 +1,96 @@
+.admineditusers-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.admineditusers-modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.admineditusers-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.admineditusers-modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.admineditusers-modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #718096;
+    transition: color 0.2s ease-in-out;
+    padding: 0;
+    line-height: 1;
+}
+
+.admineditusers-modal-close-btn:hover {
+    color: #0e79b2;
+}
+
+.admineditusers-modal-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+.admineditusers-modal-form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #4a5568;
+}
+.admineditusers-modal-form-group input,
+.admineditusers-modal-form-group select {
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out;
+}
+.admineditusers-modal-form-group input:focus,
+.admineditusers-modal-form-group select:focus {
+    outline: none;
+    border: 2px solid var(--orange);
+}
+.admineditusers-modal-actions {
+    text-align: right;
+    margin-top: 20px;
+}
+.admineditusers-modal-submit-btn {
+    background-color: var(--orange);
+    color: #ffffff;
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.admineditusers-modal-submit-btn:hover {
+    background-color: var(--orange-mid);
+}

@@ -1,0 +1,224 @@
+/* ========================================================= */
+/* .modal-overlay (Outer Container) */
+/* Corresponds to: fixed inset-0 bg-gray-900 bg-opacity-70 z-[1000] flex items-center justify-center p-4 transition-opacity duration-300 */
+/* ========================================================= */
+.finemodal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(17, 24, 39, 0.7); /* bg-gray-900 with bg-opacity-70 */
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* items-center */
+    justify-content: center; /* justify-center */
+    padding: 1rem; /* p-4 */
+    transition-property: opacity;
+    transition-duration: 300ms; /* duration-300 */
+}
+
+/* ========================================================= */
+/* .modal-content (Modal Dialog Box) */
+/* Corresponds to: bg-white rounded-xl shadow-2xl w-full max-w-sm p-6 transform transition-all duration-300 scale-100 ease-out */
+/* ========================================================= */
+.finemodal-content {
+    background-color: #ffffff; /* bg-white */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    width: 100%; /* w-full */
+    max-width: 24rem; /* max-w-sm (Tailwind's sm breakpoint width) */
+    padding: 1.5rem; /* p-6 */
+    transform: scale(1); /* scale-100 */
+    transition-property: all;
+    transition-duration: 300ms; /* duration-300 */
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1); /* ease-out */
+}
+
+/* ========================================================= */
+/* .modal-header */
+/* Corresponds to: flex justify-between items-center border-b pb-3 mb-4 */
+/* ========================================================= */
+.finemodal-header {
+    display: flex;
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+    border-bottom-width: 1px; /* border-b */
+    border-color: #e5e7eb; /* default border color, typically gray-200/300 */
+    padding-bottom: 0.75rem; /* pb-3 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* .header-title */
+/* Corresponds to: text-2xl font-extrabold text-red-600 flex items-center */
+.finemodal-header .fineheader-title {
+    font-size: 140%; /* text-2xl */
+    line-height: 2rem;
+    font-weight: 700; /* font-extrabold */
+    color: var(--black-mid); /* text-red-600 */
+    display: flex;
+    align-items: center; /* items-center */
+}
+
+/* .close-button */
+/* Corresponds to: text-gray-400 hover:text-gray-700 transition */
+.finemodal-header .fineclose-button {
+    color: #9ca3af; /* text-gray-400 */
+    transition-property: color;
+    transition-duration: 150ms; /* transition (default) */
+    cursor: pointer; /* Add a cursor for better UX */
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.finemodal-header .fineclose-button:hover {
+    color: #374151; /* hover:text-gray-700 */
+}
+
+/* .close-icon */
+/* Corresponds to: w-6 h-6 */
+.finemodal-header .fineclose-button .fineclose-icon {
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+}
+
+/* ========================================================= */
+/* .modal-body */
+/* Corresponds to: space-y-3 mb-6 text-gray-700 */
+/* ========================================================= */
+.finemodal-body {
+    margin-bottom: 1.5rem; /* mb-6 */
+    color: #374151; /* text-gray-700 */
+}
+
+/* space-y-3 implementation for direct children */
+.finemodal-body > * + * {
+    margin-top: 0.75rem; /* space-y-3 */
+}
+
+/* .body-label */
+/* Corresponds to: text-sm font-semibold */
+.finemodal-body .finebody-label {
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+    font-weight: 600; /* font-semibold */
+}
+
+/* .item-details-box */
+/* Corresponds to: bg-red-50 p-3 rounded-lg border border-red-200 */
+.finemodal-body .fineitem-details-box {
+    background-color: #fef2f2; /* bg-red-50 */
+    padding: 0.75rem; /* p-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+    border-width: 1px; /* border */
+    border-color: #fecaca; /* border-red-200 */
+}
+
+/* .book-title */
+/* Corresponds to: font-bold text-red-800 break-words */
+.finemodal-body .fineitem-details-box .finebook-title {
+    font-weight: 800; /* font-bold */
+    color: var(--black-mid); /* text-red-800 */
+    word-break: break-word;
+    font-size: 150%; /* break-words */
+}
+
+/* .overdue-info */
+/* Corresponds to: text-sm mt-1 */
+.finemodal-body .fineitem-details-box .fineoverdue-info {
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+/* .overdue-days */
+/* Corresponds to: font-semibold */
+.finemodal-body .fineitem-details-box .fineoverdue-days {
+    font-weight: 700; /* font-semibold */
+}
+
+/* .amount-due-section */
+/* Corresponds to: pt-2 text-center */
+.finemodal-body .fineamount-due-section {
+    padding-top: 0.5rem; /* pt-2 */
+    text-align: center; /* text-center */
+}
+
+/* .amount-due-label */
+/* Corresponds to: text-md font-medium */
+.finemodal-body .fineamount-due-section .fineamount-due-label {
+    font-size: 1.125rem; /* text-md (closer to text-base) */
+    line-height: 1.75rem;
+    font-weight: 500; /* font-medium */
+}
+
+/* .fine-amount */
+/* Corresponds to: text-5xl font-black text-red-600 mt-1 */
+.finemodal-body .fineamount-due-section .fine-amount {
+    font-size: 2.5rem; /* text-5xl */
+    line-height: 1; /* Approximate line-height for text-5xl */
+    font-weight: 900; /* font-black */
+    color: var(--red); /* text-red-600 */
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+/* ========================================================= */
+/* .error-message */
+/* Corresponds to: bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded mb-4 text-sm */
+/* ========================================================= */
+.fineerror-message {
+    background-color: #fee2e2; /* bg-red-100 */
+    border-width: 1px; /* border */
+    border-color: #f87171; /* border-red-400 */
+    color: #b91c1c; /* text-red-700 */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    border-radius: 0.25rem; /* rounded */
+    margin-bottom: 1rem; /* mb-4 */
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+    opacity: 1;
+    transition: 2s ease;
+}
+
+/* ========================================================= */
+/* .pay-button */
+/* Corresponds to: w-full py-3 rounded-lg text-lg font-bold transition-all duration-200 shadow-md */
+/* Note: The button color/state styles (e.g., hover, disabled) are missing in the original static classes and must be added. */
+/* ========================================================= */
+.finepay-button {
+    width: 100%; /* w-full */
+    padding-top: 0.75rem; /* py-3 */
+    padding-bottom: 0.75rem; /* py-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.75rem;
+    font-weight: 700; /* font-bold */
+    transition-property: all;
+    transition-duration: 200ms; /* duration-200 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+    border: none;
+    cursor: pointer;
+
+    /* Example primary button styling (adjust as needed, e.g., using red-600 colors) */
+    background-color: #dc2626; /* bg-red-600 */
+    color: #ffffff; /* text-white */
+}
+
+.finepay-button:hover {
+    background-color: #b91c1c; /* hover:bg-red-700 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow on hover */
+}
+
+/* .security-note */
+/* Corresponds to: text-xs text-center text-gray-500 mt-3 */
+.finesecurity-note {
+    font-size: 0.75rem; /* text-xs */
+    line-height: 1rem;
+    text-align: center; /* text-center */
+    color: #6b7280; /* text-gray-500 */
+    margin-top: 0.75rem; /* mt-3 */
+}

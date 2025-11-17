@@ -1,0 +1,186 @@
+.navbar{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 5px 15px 5px 15px;
+  background-color: var(--white-light);
+  color: var(--black);
+  min-height: 50px;
+  border-bottom: 1px solid var(--black-light);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.time-date-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.divider {
+  width: 2px; 
+  height: 30px; 
+  background-color: var(--black); 
+}
+
+.user-info-container {
+  display: flex; 
+  align-items: center; 
+  gap: 7px;
+}
+
+.bracket-name {
+  margin-bottom: 0; 
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.bracket-role {
+  margin-top: 0; 
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bracket p {
+  margin: 0px;
+  text-align: left;
+}
+
+.settings-container svg {
+  color: var(--green);
+  cursor: pointer;
+}
+
+.notification-container svg {
+  color: var(--blue);
+}
+
+.user-info-container svg {
+  color: var(--purple);
+}
+
+/* Settings Popup Styles */
+
+.settings-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.settings-popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.popup-header h4 {
+  margin: 0;
+}
+
+.close-popup {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close-popup svg {
+  color: #888;
+}
+
+.settings-form .form-group {
+    /* KEY CHANGE: Use Grid to control layout */
+    display: grid; 
+    grid-template-columns: 120px 1fr; 
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: flex-start; 
+
+}
+
+.settings-form label {
+    flex-shrink: 0; /* Prevents the label from shrinking */
+    font-weight: bold;
+    color: #555;
+    width: 120px; /* Gives the label a fixed width for alignment */
+    text-align: right;
+}
+
+.settings-form .settings-input { /* Updated selector with new class */
+    flex-grow: 1; /* Key to making it fill the space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.settings-form .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    grid-column: 1 / 3;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: ease 0.4s;
+}
+
+.settings-form .submit-button:hover {
+    background-color: var(--green-light);
+}
+.validation-error,
+.password-error-message {
+    /* Span the error message across the input column */
+    grid-column: 2 / 3; 
+    margin-top: -10px; 
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* New specific style for the requested password error message */
+.password-error-message {
+    /* 👇 ADD THIS STYLE 👇 */
+    color: red; /* Make the text red */
+    text-align: left; /* Align it under the input field */
+}
+
+/* Also update the general error styles for consistency */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  grid-column: 1 / 3; /* Make general message span both columns */
+}
